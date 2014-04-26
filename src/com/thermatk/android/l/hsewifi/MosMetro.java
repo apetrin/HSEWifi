@@ -1,10 +1,12 @@
 package com.thermatk.android.l.hsewifi;
 
 import com.loopj.android.http.*;
+
 import android.app.Service;
 import android.content.Intent;
 import android.os.Handler;
 import android.os.IBinder;
+import android.util.Log;
 import android.widget.Toast;
 
 public class MosMetro extends Service {
@@ -42,7 +44,8 @@ public class MosMetro extends Service {
         params.put("redirect_url", "");
         client.post("http://1.1.1.1/login.html", params, new AsyncHttpResponseHandler() {
 			@Override
-			public void onSuccess(final String response) {
+			public void onSuccess(String response) {
+                Log.d("MosMetro", response);
 				handler.post(new Runnable() {
 					@Override
 					public void run() {
