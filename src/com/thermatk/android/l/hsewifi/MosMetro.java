@@ -34,6 +34,7 @@ public class MosMetro extends Service {
 	}
 
 	private void sendInfo() {
+		Log.d("MosMetroTEST", "lalala sendInfo() started!");
 		AsyncHttpClient client = new AsyncHttpClient();
 		RequestParams params = new RequestParams();
         params.put("buttonClicked", "4");
@@ -45,7 +46,7 @@ public class MosMetro extends Service {
         client.post("http://1.1.1.1/login.html", params, new AsyncHttpResponseHandler() {
 			@Override
 			public void onSuccess(String response) {
-                Log.d("MosMetro", response);
+				Log.d("MosMetro", response);
 				handler.post(new Runnable() {
 					@Override
 					public void run() {
