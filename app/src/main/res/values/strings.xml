@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">HSE WiFi</string>
+    <string name="hello_world">Нечего настраивать :) Приложение работает само, если может, а сюда можно больше не заходить</string>
+    <string name="connectedto">Подключён к </string>
+    <string name="authsent">Запрос на аутентификацию отправлен</string>
+
+</resources>
